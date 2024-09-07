@@ -46,3 +46,37 @@ Integrante: Nicolás Sepúlveda Falcón
 ```bash
   sudo mysql -u root -p
 ```
+
+## Web sacada la documentación de instalación MySQL
+```bash
+  https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
+```
+
+## SSH
+## Instalar SSH
+```bash
+  sudo apt install openssh-server -y
+```
+
+## Probar installacion de SSH y permitir conexiones remotas
+```bash
+  sudo systemctl start ssh
+  sudo systemctl enable ssh
+  sudo nano /etc/ssh/sshd_config
+```
+
+## Reiniciar SSH
+```bash
+  sudo systemctl restart ssh
+```
+
+## Samba
+## Instalar Samba
+```bash
+  sudo apt install samba -y
+```
+
+
+
+
+
