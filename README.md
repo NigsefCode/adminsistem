@@ -1,7 +1,9 @@
 # Evaluación 1: Servicios y paquetes
 
-Curso: Administración de Sistemas
-Integrante: Nicolás Sepúlveda Falcón
+- Integrante: Nicolás Sepúlveda Falcón
+  
+- Curso: Administración de Sistemas
+
 
 
 ## Introducción
