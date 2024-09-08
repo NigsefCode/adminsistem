@@ -58,10 +58,7 @@ Para crear usuarios con permisos especificos, se accede a la consola de MySQL
 Los usuarios creados incluyen un administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados.
 
 #### Referencia de la documentación para MySQL
-La instalación y configuración de MySQL se realizó siguiento unos pasos encontrados en 
-```bash
-  https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
-```
+La instalación y configuración de MySQL se realizó siguiendo unos pasos encontrados en [documentación de DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
 
 ### Configuración del servidor SSH
 #### Instalación de SSH
@@ -85,7 +82,7 @@ Después de realizar los cambios se debe reiniciar el servicio SSH para aplicar 
 ```
 
 ### Instalación y configuración de Samba
-## Instalación de Samba
+#### Instalación de Samba
 Samba permite compartir archivos y carpetas en una red local.
 ```bash
   sudo apt install samba -y
