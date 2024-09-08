@@ -1,77 +1,92 @@
 # Evaluación 1: Servicios y paquetes
 
-Administración de Sistemas
+Curso: Administración de Sistemas
 Integrante: Nicolás Sepúlveda Falcón
 
 
-## Instalación
+## Introducción
+En este documento se describe el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado por VirtualBox, utilizando Debian. Los servicios incluyen Apache y PHP, MySQL, SSH, Samba y Node.js.
 
-
-## Actualizar Debian
+## Instalación y Configuración de Servicios
+### Actualización del Sistema Operativo (Debian)
+Antes de comenzar con la instalación de los servicios hay que actualizar el sistema operativo para asegurarse de que todos los paquetes esten en su última versión.
 ```bash
   sudo apt update
   sudo apt upgrade
 ```
-## Apache y PHP
-## Instalación Apache2
+
+### Instalación de Apache y PHP
+#### Instalación de Apache
+Apache es un servidor que permite servir aplicaciones web.
 ```bash
   sudo apt install apache2
 ```
 
-## Instalación PHP
+#### Instalación de PHP
+PHP es un lenguaje de programación de servidor.
 ```bash
   sudo apt install php
 ```
 
-## Instalación Dependencias PHP/Apache2
+#### Instalación de Dependencias de PHP para Apache
+Para realizar la integración de PHP con Apache es necesario instalar el siguiente módulo.
 ```bash
   sudo apt install libapache2-mod-php -y
 ```
 
-## Probar instalaciones de Apache2 y PHP
+#### Verificación de las instalaciones de Apache y PHP
+Se inicia el servicio de Apache y se verifica la versión de PHP para confirmar la correcta instalación.
 ```bash
   sudo systemctl start apache2
   sudo systemctl enable apache2
   sudo php -v
 ```
 
-## MySQL
-## Instalar MySQL Server y asegurar instalación
+### Instalación de MySQL
+#### Instalación del Servidor MySQL y configuración de Seguridad
+MySQL es un sistema de gestión de base de datos relacional.
 ```bash
   sudo apt install mysql-server -y
   sudo mysql_secure_installation
 ```
 
-## Ingreso a Consola MySQL para crear usuarios
+#### Creación de usuarios en MySQL
+Para crear usuarios con permisos especificos, se accede a la consola de MySQL
 ```bash
   sudo mysql -u root -p
 ```
+Los usuarios creados incluyen un administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados.
 
-## Web sacada la documentación de instalación MySQL
+#### Referencia de la documentación para MySQL
+La instalación y configuración de MySQL se realizó siguiento unos pasos encontrados en 
 ```bash
   https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
 ```
 
-## SSH
-## Instalar SSH
+### Configuración del servidor SSH
+#### Instalación de SSH
+El servidor SSH permite conexiones remotas seguras al servidor.
 ```bash
   sudo apt install openssh-server -y
 ```
 
-## Probar installacion de SSH y permitir conexiones remotas
+#### Configuración de SSH para conexiones remotas
+Primero se valida la correcta instalación de SSH y, posteriormente, se edita el archivo de configuración de SSH para permitir conexiones remotas.
 ```bash
   sudo systemctl start ssh
   sudo systemctl enable ssh
   sudo nano /etc/ssh/sshd_config
 ```
 
-## Reiniciar SSH
+#### Reinicio del servicio SSH
+Después de realizar los cambios se debe reiniciar el servicio SSH para aplicar la configuración.
 ```bash
   sudo systemctl restart ssh
 ```
 
-## Samba
-## Instalar Samba
+### Instalación y configuración de Samba
+## Instalación de Samba
+Samba permite compartir archivos y carpetas en una red local.
 ```bash
   sudo apt install samba -y
 ```
