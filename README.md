@@ -7,7 +7,7 @@
 
 
 ## Introducción
-En este documento se describe el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado por VirtualBox, utilizando Debian. Los servicios incluyen Apache y PHP para servir aplicaciones web, MySQL para gestión de base de datos, SSH para conexiones remotas seguras, Samba para compartir carpetas en red local y Node.js para despliegue de aplicaciones de JavaScript.
+En este documento se describe el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado y desplegado por VirtualBox, utilizando Debian. Los servicios incluyen Apache y PHP para servir aplicaciones web, MySQL para gestión de base de datos, SSH para conexiones remotas seguras, Samba para compartir carpetas en red local y Node.js para despliegue de aplicaciones de JavaScript.
 
 ## Instalación y Configuración de Servicios
 ### Actualización del Sistema Operativo (Debian)
