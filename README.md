@@ -104,11 +104,50 @@ Luego, se otorgan permisos a la carpeta. Se utiliza el siguiente comando:
 ```bash
   sudo chmod 777 /svr/samba/compartida_publica
 ```
+Se edita el archivo de configuración de Samba, con:
+```bash
+  sudo nano /etc/samba/smb.conf
+```
+Se agrega la dirección en el archivo para compartir carpeta:
+```bash
+  [compartida_publica]
+   path = /home/nico/compartida
+   available = yes
+   valid users = nico
+   read only = no
+   browsable = yes
+   public = yes
+   writable = yes
+   force user = nico
+```
+Se reinicia el servicio de Samba, con el siguiente comando:
+```bash
+  sudo systemctl restart smbd
+```
 Finalmente, se hace un enlace simbólico en la home. Cabe destacar que 'nico' es el nombre de usuario. Se utiliza el siguiente comando:
 ```bash
   ln -s /svr/samba/compartida_publica /home/nico/compartida_publica
 ```
 
+### Instalación de Node.js
+#### Instalación de Node.js
+Se instala Node.js  y se verifica su versión para comprobar la correcta instalación. Se utiliza los siguientes comandos:
+```bash
+  sudo apt install nodejs
+  nodejs -v
+```
+#### Instalación de npm
+Se instala el administrador de paquetes de Node.js, llamado npm. Se utiliza el siguiente comando:
+```bash
+  sudo apt install npm
+```
+
+### Verificación de servicios
+#### Verificación Final
+Se verifica si los servicios estan funcionando correctamente con el siguiente comando:
+```bash
+  sudo systemctl status apache2 mysql ssh smbd
+```
 
 
 
