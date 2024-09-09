@@ -95,6 +95,19 @@ Samba permite compartir archivos y carpetas en una red local. Se instala con el 
   sudo apt install samba -y
 ```
 
+#### Crear carpeta compartida
+Se crea la carpeta compartida y es ubicada en home. Se utiliza el siguiente comando:
+```bash
+  sudo mkdir -p /svr/samba/compartida_publica
+```
+Luego, se otorgan permisos a la carpeta. Se utiliza el siguiente comando:
+```bash
+  sudo chmod 777 /svr/samba/compartida_publica
+```
+Finalmente, se hace un enlace simbólico en la home. Cabe destacar que 'nico' es el nombre de usuario. Se utiliza el siguiente comando:
+```bash
+  ln -s /svr/samba/compartida_publica /home/nico/compartida_publica
+```
 
 
 
