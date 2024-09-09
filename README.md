@@ -11,7 +11,7 @@ En este documento se describe el proceso de instalación, configuración y apren
 
 ## Instalación y Configuración de Servicios
 ### Actualización del Sistema Operativo (Debian)
-Antes de comenzar con la instalación de los servicios hay que actualizar el sistema operativo para asegurarse de que todos los paquetes esten en su última versión.
+Antes de comenzar con la instalación de los servicios hay que actualizar el sistema operativo para asegurarse de que todos los paquetes estén en su última versión.
 ```bash
   sudo apt update
   sudo apt upgrade
