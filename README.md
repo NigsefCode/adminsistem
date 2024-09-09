@@ -49,7 +49,9 @@ Se crea un archivo PHP en el directorio de documentos de apache, con el siguient
 ```bash
   sudo nano /var/www/html/index.php
 ```
-Luego se escribe el contenido que se desea en el archivo 'index.php'
+Luego se escribe el contenido que se desea en el archivo 'index.php':
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/067caf8924562fcb9ca2875021d78cb2e72a1f3f/PHP_Hola%20Mundo.png)
 
 Por último, se accede a la aplicación creada, copiando la siguiente url en su navegador:
 - http://localhost/index.php
