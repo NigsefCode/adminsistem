@@ -7,7 +7,7 @@
 
 
 ## Introducción
-En este documento se describe el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado por VirtualBox, utilizando Debian. Los servicios incluyen Apache y PHP, MySQL, SSH, Samba y Node.js.
+En este documento se describe el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado por VirtualBox, utilizando Debian. Los servicios incluyen Apache y PHP para servir aplicaciones web, MySQL para gestión de base de datos, SSH para conexiones remotas seguras, Samba para compartir carpetas en red local y Node.js para despliegue de aplicaciones de JavaScript.
 
 ## Instalación y Configuración de Servicios
 ### Actualización del Sistema Operativo (Debian)
@@ -19,25 +19,25 @@ Antes de comenzar con la instalación de los servicios hay que actualizar el sis
 
 ### Instalación de Apache y PHP
 #### Instalación de Apache
-Apache es un servidor que permite servir aplicaciones web.
+Apache es un servidor que permite servir aplicaciones web. Se instala con el siguiente comando:
 ```bash
   sudo apt install apache2
 ```
 
 #### Instalación de PHP
-PHP es un lenguaje de programación de servidor.
+PHP es un lenguaje de programación de servidor. Se instala con el siguiente comando:
 ```bash
   sudo apt install php
 ```
 
 #### Instalación de Dependencias de PHP para Apache
-Para realizar la integración de PHP con Apache es necesario instalar el siguiente módulo.
+Para realizar la integración de PHP con Apache es necesario instalar el siguiente módulo. Se instala con el siguiente comando:
 ```bash
   sudo apt install libapache2-mod-php -y
 ```
 
 #### Verificación de las instalaciones de Apache y PHP
-Se inicia el servicio de Apache y se verifica la versión de PHP para confirmar la correcta instalación.
+Se inicia el servicio de Apache y se verifica la versión de PHP para confirmar la correcta instalación. Se verifica con el siguiente comando:
 ```bash
   sudo systemctl start apache2
   sudo systemctl enable apache2
@@ -46,7 +46,7 @@ Se inicia el servicio de Apache y se verifica la versión de PHP para confirmar 
 
 ### Instalación de MySQL
 #### Instalación del Servidor MySQL y configuración de Seguridad
-MySQL es un sistema de gestión de base de datos relacional.
+MySQL es un sistema de gestión de base de datos relacional. Se instala con el siguiente comando y luego se asegura la instalación con: 
 ```bash
   sudo apt install mysql-server -y
   sudo mysql_secure_installation
@@ -64,13 +64,13 @@ La instalación y configuración de MySQL se realizó siguiendo unos pasos encon
 
 ### Configuración del servidor SSH
 #### Instalación de SSH
-El servidor SSH permite conexiones remotas seguras al servidor.
+El servidor SSH permite conexiones remotas seguras al servidor. Se instala con el siguiente comando:
 ```bash
   sudo apt install openssh-server -y
 ```
 
 #### Configuración de SSH para conexiones remotas
-Primero se valida la correcta instalación de SSH y, posteriormente, se edita el archivo de configuración de SSH para permitir conexiones remotas.
+Primero se valida la correcta instalación de SSH y, posteriormente, se edita el archivo de configuración de SSH para permitir conexiones remotas con los siguientes comandos:
 ```bash
   sudo systemctl start ssh
   sudo systemctl enable ssh
@@ -78,14 +78,14 @@ Primero se valida la correcta instalación de SSH y, posteriormente, se edita el
 ```
 
 #### Reinicio del servicio SSH
-Después de realizar los cambios se debe reiniciar el servicio SSH para aplicar la configuración.
+Después de realizar los cambios se debe reiniciar el servicio SSH para aplicar la configuración. Se reinicia con el siguiente comando:
 ```bash
   sudo systemctl restart ssh
 ```
 
 ### Instalación y configuración de Samba
 #### Instalación de Samba
-Samba permite compartir archivos y carpetas en una red local.
+Samba permite compartir archivos y carpetas en una red local. Se instala con el siguiente comando:
 ```bash
   sudo apt install samba -y
 ```
