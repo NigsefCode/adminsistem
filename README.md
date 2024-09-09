@@ -44,6 +44,18 @@ Se inicia el servicio de Apache y se verifica la versión de PHP para confirmar 
   sudo php -v
 ```
 
+#### Crear una aplicación PHP
+Se crea un archivo PHP en el directorio de documentos de apache, con el siguiente comando:
+```bash
+  sudo nano /var/www/html/index.php
+```
+Luego se escribe el contenido que se desea en el archivo 'index.php'
+
+Por último, se accede a la aplicación creada, copiando la siguiente url en su navegador:
+- http://localhost/index.php
+
+Donde se debe reflejar lo escrito en el archivo:
+
 ### Instalación de MySQL
 #### Instalación del Servidor MySQL y configuración de Seguridad
 MySQL es un sistema de gestión de base de datos relacional. Se instala con el siguiente comando y luego se asegura la instalación con: 
