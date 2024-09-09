@@ -77,6 +77,11 @@ Primero se valida la correcta instalación de SSH y, posteriormente, se edita el
   sudo nano /etc/ssh/sshd_config
 ```
 
+Luego, se debe buscar las siguientes líneas de código y verificar que estén en 'yes' ambas opciones:
+```bash
+  PermitRootLogin yes
+  PasswordAuthentication yes
+```
 #### Reinicio del servicio SSH
 Después de realizar los cambios se debe reiniciar el servicio SSH para aplicar la configuración. Se reinicia con el siguiente comando:
 ```bash
