@@ -253,7 +253,7 @@ Se le pedirá la contraseña creada anteriormente y podra crear, eliminar o ver 
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/3af8d5933a4bb5ab7134f1a35a5bc7b317a09556/SAMBA_Acceder%20a%20la%20carpeta%20compartida%20desde%20localhost.png)
 
-En caso de que quiera ingresar desde otro dispositivo, puede utilizar el mismo comando pero cambiando la ip:
+En caso de que quiera ingresar desde otro dispositivo, puede utilizar el mismo comando pero cambiando la ip (se requiere conocer la contraseña del usuario):
 ```bash
   smbclient //ip_maquina_virtual/compartida_publica -U usuario
 ```
