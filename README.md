@@ -116,6 +116,14 @@ Donde se debe reflejar la conexion de la siguiente manera:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/a26f67464ee52d9e63ec71fb146f4766f309e566/PHP_Compracion%20de%20verificacion%20BD.png)
 
+Para confirmar si la conexión es exitosa desde el host para los usuarios administrador y lector se modifico el codigo para imprimir la conexión con respecto al usuario creado:
+Administrador:
+
+
+Lector:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/a4387db2c33fb86c8d21f181078e321690a9443a/PHP_Conexion%20Lector_Host.png)
+
 ### Instalación y configuración de SSH
 #### Instalación de SSH
 El servidor SSH permite conexiones remotas seguras al servidor. Se instala con el siguiente comando:
