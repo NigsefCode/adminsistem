@@ -9,6 +9,7 @@
 ## Introducción
 En este documento se describe el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado y desplegado por VirtualBox, utilizando Debian. Los servicios incluyen Apache y PHP para servir aplicaciones web, MySQL para gestión de base de datos, SSH para conexiones remotas seguras, Samba para compartir carpetas en red local y Node.js para despliegue de aplicaciones de JavaScript.
 
+
 ## Instalación y Configuración de Servicios
 ### Actualización del Sistema Operativo (Debian)
 Antes de comenzar con la instalación de los servicios hay que actualizar el sistema operativo para asegurarse de que todos los paquetes estén en su última versión.
@@ -16,6 +17,7 @@ Antes de comenzar con la instalación de los servicios hay que actualizar el sis
   sudo apt update
   sudo apt upgrade
 ```
+
 
 ### Instalación de Apache y PHP
 #### Instalación de Apache
@@ -78,7 +80,7 @@ Los usuarios creados incluyen un administrador (admin) con todos los permisos y 
 #### Referencia de la documentación para MySQL
 La instalación y configuración de MySQL se realizó siguiendo unos pasos encontrados en [documentación de DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
 
-### Configuración del servidor SSH
+### Instalación y configuración de SSH
 #### Instalación de SSH
 El servidor SSH permite conexiones remotas seguras al servidor. Se instala con el siguiente comando:
 ```bash
@@ -92,17 +94,22 @@ Primero se valida la correcta instalación de SSH y, posteriormente, se edita el
   sudo systemctl enable ssh
   sudo nano /etc/ssh/sshd_config
 ```
-
 Luego, se debe buscar las siguientes líneas de código y verificar que estén en 'yes' ambas opciones:
 ```bash
   PermitRootLogin yes
   PasswordAuthentication yes
 ```
-#### Reinicio del servicio SSH
-Después de realizar los cambios se debe reiniciar el servicio SSH para aplicar la configuración. Se reinicia con el siguiente comando:
+Para finalizar, después de realizar los cambios se debe reiniciar el servicio SSH para aplicar la configuración. Se reinicia con el siguiente comando:
 ```bash
   sudo systemctl restart ssh
 ```
+
+#### Generar claves SSH en el host
+Antes de generar claves en la computadora, se debe conocer la dirección IP de tu herramienta, si se utiliza alguna distribución Linux (Ubuntu, Debian), se puede conocer con el siguiente comando:
+```bash
+  nmcli -p device show
+```
+La dirección IP es la que se encuentra junto al elemento 'IP4.ADDRESS'
 
 ### Instalación y configuración de Samba
 #### Instalación de Samba
@@ -169,6 +176,7 @@ Se instala Node.js  y se verifica su versión para comprobar la correcta instala
   sudo apt install nodejs
   nodejs -v
 ```
+
 #### Instalación de npm
 Se instala el administrador de paquetes de Node.js, llamado npm. Se utiliza el siguiente comando:
 ```bash
