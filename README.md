@@ -71,6 +71,14 @@ Luego, se crea el archivo donde se realizará la verificación:
 ```bash
   sudo nano /var/www/html/db_connect_mysql.php
 ```
+Para, posteriormente, crear la verificación en el archivo creado. Observar el siguiente ejemplo:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/2295bad50fc2383966c4034fa84bdc0f38a4a511/PHP_Crear%20Verificacion%20en%20PHP%20de%20MySQL.png)
+
+Se puede verificar la conexión a la base de datos en el navegador:
+- http://localhost/db_connect_mysql.php
+
+Donde se debe reflejar la conexion de la siguiente manera:
 
 ### Instalación y configuración de MySQL
 #### Instalación del Servidor MySQL y configuración de Seguridad
