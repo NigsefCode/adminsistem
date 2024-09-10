@@ -7,7 +7,7 @@
 
 
 ## Introducción
-En este documento se describe el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado y desplegado por VirtualBox, utilizando Debian. Los servicios incluyen Apache y PHP para servir aplicaciones web, MySQL para gestión de base de datos, SSH para conexiones remotas seguras, Samba para compartir carpetas en red local y Node.js para despliegue de aplicaciones de JavaScript.
+Este documento tiene como objetivo orientar y describir el proceso de instalación, configuración y aprendizaje de varios servicios en un sistema operativo creado y desplegado por VirtualBox. Se utilizará el sistema operativo Debian, donde los servicios incluyen Apache y PHP para servir aplicaciones web, MySQL para gestión de base de datos, SSH para conexiones remotas seguras, Samba para compartir carpetas en red local y Node.js para despliegue de aplicaciones de JavaScript.
 
 
 ## Instalación y Configuración de Servicios
@@ -24,7 +24,7 @@ MySQL es un sistema de gestión de base de datos relacional. Primero se descarga
 ```bash
   wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
 ```
-Posteriormente se installa el archivo descargado:
+Posteriormente se instala el archivo descargado:
 ```bash
   sudo apt install ./mysql-apt-config_0.8.32-1_all.deb
 ```
@@ -38,7 +38,7 @@ Para la creación de una base de datos a modo de prueba, es necesario acceder a 
 ```bash
   sudo mysql -u root -p
 ```
-Una vez en la consola, se puede utilizar la sintaxis de MySQL para crear la base de dates y crear un usuario administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados:
+Una vez en la consola, se puede utilizar la sintaxis de MySQL para crear la base de datos y crear un usuario administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados:
 
 Creación de la base de datos:
 
@@ -52,8 +52,8 @@ Verificar usuarios creados:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/91fb7b6649f0e7e8686dcd303861e36e9a6d542b/MySQL_Verificar%20usuarios%20creados.png)
 
-Sin embargo, para que funcione en el host los usuarios es necesario realizar algunas modificaciones para que los usuarios se puedan conectar desde el host al servicio de la máquina virtual en MySQL:
-Se ingresa al panel de mysql: se ejecutan los siguientes comandos:
+Sin embargo, para que los usuarios funcionen en el host, es necesario realizar algunas modificaciones para que los usuarios se puedan conectar desde el host al servicio de la máquina virtual en MySQL:
+Se ingresa al panel de mysql:
 ```bash
   sudo mysql -u root -p
 ```
@@ -270,7 +270,7 @@ Se hace un enlace simbólico en la home. Se utiliza el siguiente comando:
 ```bash
   ln -s /srv/samba/compartida_publica /home/usuario/compartida_publica
 ```
-Se confirma si se completo el enlace simbólico en la home. Estando en home se debe utilizar el siguiente comando:
+Se confirma si se completó el enlace simbólico en la home. Estando en home se debe utilizar el siguiente comando:
 ```bash
   ls
 ```
@@ -296,7 +296,7 @@ Luego, se crea una constraseña con el usuario:
 ```bash
   sudo smbpasswd -a usuario
 ```
-Para terminar, se ingresa de la siguiente manera:
+Para terminar, se realiza la conexión remota ingresando el siguiente comando:
 ```bash
   smbclient //localhost/compartida_publica -U usuario
 ```
@@ -324,7 +324,7 @@ Se instala el administrador de paquetes de Node.js, llamado npm. Se utiliza el s
 ```
 
 #### Configuración de Node.js
-Se crea una carpeta en la home, donde se quiera trabajar, como por ejemplo
+Se crea una carpeta en la home, donde se quiera trabajar, como por ejemplo:
 ```bash
   mkdir appsnode
 ```
@@ -333,7 +333,7 @@ Luego se entra a la carpeta y se genera un archivo js de la siguiente manera:
   cd appsnode
   nano app.js
 ```
-Posteriormente se crea la aplicación Node.js como un Hola Mundo:
+Posteriormente se crea la aplicación Node.js como un Hola Node:
 ```bash
   const http = require('http');
   const port = 3000;
@@ -367,12 +367,12 @@ Se verifica si los servicios estan funcionando correctamente con el siguiente co
 ```
 
 ### Logs de Comandos
-Hubo un problema en el almacenaje de comandos, donde únicamente se muestran los comandos que ejecuté después de encender la máquina virtual. En otras palabras, todos los comandos utilizados antes de apagar la máquina virtual se perdieron. Desconozco el motivo, sin embargo, detalle cada paso con cada linea de código utilizado a lo largo del Readme.
+Hubo un problema en el almacenaje de comandos, donde únicamente se muestran los comandos que ejecuté después de encender la máquina virtual. En otras palabras, todos los comandos utilizados antes de apagar la máquina virtual se perdieron. Desconozco el motivo, sin embargo, detallé cada paso y cada linea de código utilizado a lo largo del Readme.
 
 ### Errores comunes y soluciones.
 - Hubo un problema en MySQL sobre la instalación con apt, el sistema operativo no reconocia el comando ni la librería. Por ello, se tuvo que descargar el paquete dev, que al actualizar el sistema operativo, una vez instalado el paquete, reconocía el apt de las librerías de mysql. Además, hubo un problema al verificar usuarios en Windows 11, por ende se tuvo que modificar los usuarios para que puedan conectarse no solo en el localhost.
-- Errores de sintaxis al crear el script de PHP sobre la conexión de MySQL. Para solucionarlo se busco documentación y videos actualizados que permitan generar el script correctamente.
-- Problemas al estar en Windows 10/11 y usar PowerShell ya que hubieron comandos que no funcionaban y se tuvo que buscar documentación sobre comandos alternativas. Sin embargo, para el trabajo, en el caso de ssh, se hizo de forma manual las configuraciones correspondientes.
+- Errores de sintaxis al crear el script de PHP sobre la conexión de MySQL. Para solucionarlo se buscó documentación y videos actualizados que permitan generar el script correctamente.
+- Problemas al estar en Windows 10/11 y usar PowerShell, ya que hubieron comandos que no funcionaban y se tuvo que buscar documentación sobre comandos alternativos. Sin embargo, para el trabajo, en el caso de ssh, se hizo de forma manual las configuraciones correspondientes.
 - En Samba, se tuvo que configurar los permisos de la carpeta compartida, en donde se tuvo que investigar mucho para configurarlos y reconocer lo que hace cada línea de código correspondiente.
 
 
