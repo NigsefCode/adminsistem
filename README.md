@@ -91,6 +91,11 @@ Donde se debe reflejar lo escrito en el archivo:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/cbf7912c035226f095b6b0684eb0363caf68a307/PHP_Comprobacion%20Hola%20Mundo.png)
 
+Para verificar la aplicación en el navegador del host:
+- http://ip_maquina_virtual/index.php
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/aad13392d83257d85bbc1ad8eb39a6a0f1e35351/PHP_HolaMundo_Host.png)
+
 #### Verificación de conexión a la base de datos MySQL
 Para la creación del script de PHP que demuestre una conexión a la base de datos MySQL, es necesario instalar:
 ```bash
@@ -110,7 +115,6 @@ Se puede verificar la conexión a la base de datos en el navegador:
 Donde se debe reflejar la conexion de la siguiente manera:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/a26f67464ee52d9e63ec71fb146f4766f309e566/PHP_Compracion%20de%20verificacion%20BD.png)
-
 
 ### Instalación y configuración de SSH
 #### Instalación de SSH
