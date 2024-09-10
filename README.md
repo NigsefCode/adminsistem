@@ -144,7 +144,10 @@ Se hace un enlace simbólico en la home. Cabe destacar que 'nico' es el nombre d
 ```bash
   ln -s /svr/samba/compartida_publica /home/nico/compartida_publica
 ```
-Se confirma si se completo el enlace simbólico:
+Se confirma si se completo el enlace simbólico en la home. Estando en home se debe utilizar el siguiente comando:
+```bash
+  ls
+```
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/2278af5fc6d7f9b98e1b0107ddd77eeb57ae3543/Samba_Carpeta%20compartida%20en%20Home.png)
 
@@ -152,8 +155,12 @@ Finalmente, se enlaza la carpeta compartida a la raíz del servidor web Apache
 ```bash
   sudo ln -s /home/nico/compartida_publica /var/www/html/compartida_publica
 ```
-Al realizar una búsqueda de carpetas en la raíz del servidor web apache, da como resultado que la carpeta se generó correctamente:
+Para confirmar el enlace en el servidor web Apache se debe realizar una búsqueda de la carpeta en la raíz del servidor web Apache. Se utiliza el siguiente comando:
+```bash
+  sudo ln -s /home/nico/compartida_publica /var/www/html/compartida_publica
+```
 
+![image alt](https://github.com/NigsefCode/adminsistem/blob/8f346a45cd5819ccec11dfdd13bcd20e55e2d1c0/Samba_Carpeta%20Compartida%20en%20raiz%20Apache.png)
 
 ### Instalación de Node.js
 #### Instalación de Node.js
