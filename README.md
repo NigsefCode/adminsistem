@@ -72,7 +72,6 @@ Luego, se crea el archivo donde se realizará la verificación:
   sudo nano /var/www/html/db_connect_mysql.php
 ```
 
-
 ### Instalación y configuración de MySQL
 #### Instalación del Servidor MySQL y configuración de Seguridad
 MySQL es un sistema de gestión de base de datos relacional. Se instala con el siguiente comando y luego se asegura la instalación con: 
@@ -85,7 +84,11 @@ Para la creación de una base de datos a modo de prueba, es necesario acceder a 
 ```bash
   sudo mysql -u root -p
 ```
-Una vez en la consola, se puede utilizar la sintaxis de MySQL para crear la base de dates y crear usuarios: un administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados, un ejemplo puede ser el siguiente:
+Una vez en la consola, se puede utilizar la sintaxis de MySQL para crear la base de dates y crear un usuario administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados:
+
+Creación de la base de datos:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/d4829bde8e92f7653433d6d7f6516dc8f8501b78/MySQL_Crear%20Base%20de%20datos%20prueba.png)
 
 
 
