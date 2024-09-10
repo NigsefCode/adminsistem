@@ -147,7 +147,7 @@ Se crea la carpeta compartida. Se utiliza el siguiente comando:
 ```
 Luego, se otorgan permisos a la carpeta. Se utiliza el siguiente comando:
 ```bash
-  sudo chmod 777 /svr/samba/compartida_publica
+  sudo chmod 777 /srv/samba/compartida_publica
 ```
 Se edita el archivo de configuración de Samba, con:
 ```bash
