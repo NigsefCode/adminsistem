@@ -62,20 +62,32 @@ Donde se debe reflejar lo escrito en el archivo:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/cbf7912c035226f095b6b0684eb0363caf68a307/PHP_Comprobacion%20Hola%20Mundo.png)
 
-### Instalación de MySQL
+### Creación a la base de datos MySQL
+Para la creación del script de PHP que demuestre una conexión a la base de datos MySQL, es necesario instalar:
+```bash
+  sudo apt install php-mysql
+```
+Luego, se crea el archivo donde se realizará la verificación:
+```bash
+  sudo nano /var/www/html/db_connect_mysql.php
+```
+
+
+### Instalación y configuración de MySQL
 #### Instalación del Servidor MySQL y configuración de Seguridad
 MySQL es un sistema de gestión de base de datos relacional. Se instala con el siguiente comando y luego se asegura la instalación con: 
 ```bash
   sudo apt install mysql-server -y
   sudo mysql_secure_installation
 ```
-
-#### Creación de usuarios en MySQL
-Para crear usuarios con permisos especificos, se accede a la consola de MySQL
+#### Configuración de la base de datos MySQL
+Para la creación de una base de datos a modo de prueba, es necesario acceder a la consola MySQL
 ```bash
   sudo mysql -u root -p
 ```
-Los usuarios creados incluyen un administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados.
+Una vez en la consola, se puede utilizar la sintaxis de MySQL para crear la base de dates y crear usuarios: un administrador (admin) con todos los permisos y un usuario lector (lector) con permisos limitados, un ejemplo puede ser el siguiente:
+
+
 
 #### Referencia de la documentación para MySQL
 La instalación y configuración de MySQL se realizó siguiendo unos pasos encontrados en [documentación de DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
