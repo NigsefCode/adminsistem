@@ -367,7 +367,7 @@ Se verifica si los servicios estan funcionando correctamente con el siguiente co
 ```
 
 ### Logs de Comandos
-Hubo un problema en el almacenaje de comandos, donde únicamente se muestran los comandos que ejecuté después de encender la máquina virtual. En otras palabras, todos los comandos utilizados antes de apagar la máquina virtual se perdieron. Desconozco el motivo, sin embargo, detallé cada paso y cada linea de código utilizado a lo largo del Readme.
+Hubo un problema en el almacenaje de comandos, donde únicamente se muestran los comandos que ejecuté después de encender la máquina virtual. En otras palabras, todos los comandos utilizados antes de apagar la máquina virtual se perdieron. Desconozco el motivo, sin embargo, detallé cada paso y cada linea de código utilizado a lo largo del Readme. De igual manera, se subio un archivo [history.log](https://github.com/NigsefCode/adminsistem/blob/08c8e23921825fa26d97451d75c315f114b1c03f/history.log)
 
 ### Errores comunes y soluciones.
 - Hubo un problema en MySQL sobre la instalación con apt, el sistema operativo no reconocia el comando ni la librería. Por ello, se tuvo que descargar el paquete dev, que al actualizar el sistema operativo, una vez instalado el paquete, reconocía el apt de las librerías de mysql. Además, hubo un problema al verificar usuarios en Windows 11, por ende se tuvo que modificar los usuarios para que puedan conectarse no solo en el localhost.
