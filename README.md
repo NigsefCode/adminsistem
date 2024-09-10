@@ -90,6 +90,9 @@ Creación de la base de datos:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/d4829bde8e92f7653433d6d7f6516dc8f8501b78/MySQL_Crear%20Base%20de%20datos%20prueba.png)
 
+Crear usuarios y permisos:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/fbf2862509383838d4f60c40af4476644fbbfd77/MySQL_Usuarios%20y%20Permisos.png)
 
 
 #### Referencia de la documentación para MySQL
