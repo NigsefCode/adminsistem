@@ -88,7 +88,7 @@ Una vez en la consola, se puede utilizar la sintaxis de MySQL para crear la base
 
 Creación de la base de datos:
 
-
+![image alt](https://github.com/NigsefCode/adminsistem/blob/8e8a4e96e3b54c7ceae84308da65d0c5fd8ff7df/MySQL_Crear%20Base%20de%20datos%20prueba.png)
 
 Crear usuarios y permisos:
 
