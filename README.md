@@ -123,6 +123,8 @@ Administrador:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/7f908bc666dd00faf43ca0a4dd300b939af7db70/PHP_AdminDatos.png)
 
+![image alt](https://github.com/NigsefCode/adminsistem/blob/7d4166cac746563ecc1d6822fb808a5c05366fc2/PHP_Conexion%20Admin_Host.png)
+
 Lector:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/e6543e00fd2e584c95543e2e20c99a237259c58a/PHP_LectorDatos.png)
