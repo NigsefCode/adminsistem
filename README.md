@@ -94,6 +94,10 @@ Crear usuarios y permisos:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/fbf2862509383838d4f60c40af4476644fbbfd77/MySQL_Usuarios%20y%20Permisos.png)
 
+Verificar usuarios creados:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/91fb7b6649f0e7e8686dcd303861e36e9a6d542b/MySQL_Verificar%20usuarios%20creados.png)
+
 
 #### Referencia de la documentación para MySQL
 La instalación y configuración de MySQL se realizó siguiendo unos pasos encontrados en [documentación de DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
