@@ -140,10 +140,16 @@ Se reinicia el servicio de Samba, con el siguiente comando:
 ```bash
   sudo systemctl restart smbd
 ```
-Finalmente, se hace un enlace simbólico en la home. Cabe destacar que 'nico' es el nombre de usuario. Se utiliza el siguiente comando:
+Se hace un enlace simbólico en la home. Cabe destacar que 'nico' es el nombre de usuario. Se utiliza el siguiente comando:
 ```bash
   ln -s /svr/samba/compartida_publica /home/nico/compartida_publica
 ```
+Finalmente, se enlaza la carpeta compartida a la raíz del servidor web Apache
+```bash
+  sudo ln -s /home/nico/compartida_publica /var/www/html/compartida_publica
+```
+Al realizar una búsqueda de carpetas en la raíz del servidor web apache, da como resultado que la carpeta se generó correctamente:
+
 
 ### Instalación de Node.js
 #### Instalación de Node.js
