@@ -195,7 +195,7 @@ Y se otorgan permisos de acceso:
   chmod 700 ~/.ssh
   chmod 600 ~/.ssh/authorized_keys
 ```
-Se puede corrobar volviendo a antrar a la máquina virtual con
+Se puede verificar volviendo a antrar a la máquina virtual con
 ```bash
   ssh usuario@ip_maquina_virtual
 ```
@@ -330,6 +330,10 @@ Se guarda el archivo y se ejecuta:
 ```
 Para comprobar si el acceso de la aplicación Node.js funciona desde el navegador del host en el puerto 3000, se utiliza el siguiente url:
 - http://ip_maquina_virtual:3000/
+
+Donde se debería mostrar de la siguiente manera:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/686f4a0e655cf1e841fb63a3f449265a4bb05f82/NODEJS_App%20en%20Host%20nav.png)
 
 ### Verificación de servicios
 #### Verificación Final
