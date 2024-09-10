@@ -342,5 +342,14 @@ Se verifica si los servicios estan funcionando correctamente con el siguiente co
   sudo systemctl status apache2 mysql ssh smbd
 ```
 
+### Logs de Comandos
+Hubo un problema en el almacenaje de comandos, donde únicamente se muestran los comandos que ejecuté después de encender la máquina virtual. En otras palabras, todos los comandos utilizados antes de apagar la máquina virtual se perdieron. Desconozco el motivo, sin embargo, detalle cada paso con cada linea de código utilizado a lo largo del Readme.
+
+### Errores comunes y soluciones.
+- Hubo un problema en MySQL sobre la instalación con apt, el sistema operativo no reconocia el comando ni la librería. Por ello, se tuvo que descargar el paquete dev, que al actualizar el sistema operativo, una vez instalado el paquete, reconocía el apt de las librerías de mysql.
+- Errores de sintaxis al crear el script de PHP sobre la conexión de MySQL. Para solucionarlo se busco documentación y videos actualizados que permitan generar el script correctamente.
+- Problemas al estar en Windows 10/11 y usar PowerShell ya que hubieron comandos que no funcionaban y se tuvo que buscar documentación sobre comandos alternativas. Sin embargo, para el trabajo, en el caso de ssh, se hizo de forma manual las configuraciones correspondientes.
+- En Samba, se tuvo que configurar los permisos de la carpeta compartida, en donde se tuvo que investigar mucho para configurarlos y reconocer lo que hace cada línea de código correspondiente.
+
 
 
