@@ -62,7 +62,7 @@ Donde se debe reflejar lo escrito en el archivo:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/cbf7912c035226f095b6b0684eb0363caf68a307/PHP_Comprobacion%20Hola%20Mundo.png)
 
-### Creación a la base de datos MySQL
+#### Creación de demostración a la base de datos
 Para la creación del script de PHP que demuestre una conexión a la base de datos MySQL, es necesario instalar:
 ```bash
   sudo apt install php-mysql
