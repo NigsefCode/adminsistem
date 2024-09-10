@@ -116,11 +116,16 @@ Donde se debe reflejar la conexion de la siguiente manera:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/a26f67464ee52d9e63ec71fb146f4766f309e566/PHP_Compracion%20de%20verificacion%20BD.png)
 
-Para confirmar si la conexión es exitosa desde el host para los usuarios administrador y lector se modifico el codigo para imprimir la conexión con respecto al usuario creado:
+Para confirmar si la conexión es exitosa desde el host para los usuarios administrador y lector se debe entrar desde el navegador y, para este ejemplo, se modificó el codigo para imprimir la conexión con respecto al usuario creado:
+- http://ip_maquina_virtual/db_connect_mysql.php
+
 Administrador:
 
 
 Lector:
+
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/e6543e00fd2e584c95543e2e20c99a237259c58a/PHP_LectorDatos.png)
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/a4387db2c33fb86c8d21f181078e321690a9443a/PHP_Conexion%20Lector_Host.png)
 
