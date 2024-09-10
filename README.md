@@ -285,7 +285,7 @@ En caso de que quiera ingresar desde otro dispositivo, puede utilizar el mismo c
   smbclient //ip_maquina_virtual/compartida_publica -U usuario
 ```
 
-### Instalación de Node.js
+### Instalación y Configuración de Node.js
 #### Instalación de Node.js
 Se instala Node.js  y se verifica su versión para comprobar la correcta instalación. Se utiliza los siguientes comandos:
 ```bash
@@ -298,6 +298,38 @@ Se instala el administrador de paquetes de Node.js, llamado npm. Se utiliza el s
 ```bash
   sudo apt install npm
 ```
+
+#### Configuración de Node.js
+Se crea una carpeta en la home, donde se quiera trabajar, como por ejemplo
+```bash
+  mkdir appsnode
+```
+Luego se entra a la carpeta y se genera un archivo js de la siguiente manera:
+```bash
+  cd appsnode
+  nano app.js
+```
+Posteriormente se crea la aplicación Node.js como un Hola Mundo:
+```bash
+  const http = require('http');
+  const port = 3000;
+  
+  const requestHandler = (request, response) => {
+      response.end('Hello, Node.js!');
+  };
+  
+  const server = http.createServer(requestHandler);
+  
+  server.listen(port, () => {
+      console.log(`Server is running on http://localhost:${port}`);
+  });
+```
+Se guarda el archivo y se ejecuta:
+```bash
+  node app.js
+```
+Para comprobar si el acceso de la aplicación Node.js funciona desde el navegador del host en el puerto 3000, se utiliza el siguiente url:
+- http://ip_maquina_virtual:3000/
 
 ### Verificación de servicios
 #### Verificación Final
