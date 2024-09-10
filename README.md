@@ -208,6 +208,7 @@ Para terminar, se ingresa de la siguiente manera:
 ```
 Se le pedirá la contraseña creada anteriormente y podra crear, eliminar o ver carpetas, entre otras cosas. Se puede observar en el siguiente ejemplo:
 
+![image alt](https://github.com/NigsefCode/adminsistem/blob/3af8d5933a4bb5ab7134f1a35a5bc7b317a09556/SAMBA_Acceder%20a%20la%20carpeta%20compartida%20desde%20localhost.png)
 ### Instalación de Node.js
 #### Instalación de Node.js
 Se instala Node.js  y se verifica su versión para comprobar la correcta instalación. Se utiliza los siguientes comandos:
