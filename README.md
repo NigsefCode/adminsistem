@@ -155,7 +155,6 @@ Para este ejemplo se utilizó el tamaño estándar. Ahora se copia la clave púb
 ```bash
   ssh-copy-id usuario@ip_máquina_virtual
 ```
-
 En caso de estar en Windows 10/11 en PowerShell y no funcione el comando, se puede hacer de forma manual de la siguiente forma:
 ```bash
   cat ~/.ssh/id_rsa.pub | ssh usuario@ip_maquina_virtual  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
@@ -169,6 +168,13 @@ Y se otorgan permisos de acceso:
   chmod 700 ~/.ssh
   chmod 600 ~/.ssh/authorized_keys
 ```
+Se puede corrobar volviendo a antrar a la máquina virtual con
+```bash
+  ssh usuario@ip_maquina_virtual
+```
+Un ejemplo del acceso es:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/48c5e0d91efe375c0342c94ef37392f9f731f949/SSH_Conexion%20de%20Host%20a%20Debian_Filtrado.png)
 
 ### Instalación y configuración de Samba
 #### Instalación de Samba
