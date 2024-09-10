@@ -124,7 +124,7 @@ Se edita el archivo de configuración de Samba, con:
 ```bash
   sudo nano /etc/samba/smb.conf
 ```
-Se agrega la dirección en el archivo para compartir carpeta:
+Se agrega la dirección al final del archivo para compartir carpeta:
 ```bash
   [compartida_publica]
    path = /home/nico/compartida
@@ -157,7 +157,7 @@ Finalmente, se enlaza la carpeta compartida a la raíz del servidor web Apache
 ```
 Para confirmar el enlace en el servidor web Apache se debe realizar una búsqueda de la carpeta en la raíz del servidor web Apache. Se utiliza el siguiente comando:
 ```bash
-  sudo ln -s /home/nico/compartida_publica /var/www/html/compartida_publica
+  ls /var/www/html
 ```
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/8f346a45cd5819ccec11dfdd13bcd20e55e2d1c0/Samba_Carpeta%20Compartida%20en%20raiz%20Apache.png)
