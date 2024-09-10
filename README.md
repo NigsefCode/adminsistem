@@ -80,6 +80,8 @@ Se puede verificar la conexión a la base de datos en el navegador:
 
 Donde se debe reflejar la conexion de la siguiente manera:
 
+![image alt](https://github.com/NigsefCode/adminsistem/blob/a26f67464ee52d9e63ec71fb146f4766f309e566/PHP_Compracion%20de%20verificacion%20BD.png)
+
 ### Instalación y configuración de MySQL
 #### Instalación del Servidor MySQL y configuración de Seguridad
 MySQL es un sistema de gestión de base de datos relacional. Se instala con el siguiente comando y luego se asegura la instalación con: 
