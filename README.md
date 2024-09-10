@@ -112,7 +112,7 @@ Samba permite compartir archivos y carpetas en una red local. Se instala con el 
 ```
 
 #### Crear carpeta compartida
-Se crea la carpeta compartida y es ubicada en home. Se utiliza el siguiente comando:
+Se crea la carpeta compartida. Se utiliza el siguiente comando:
 ```bash
   sudo mkdir -p /svr/samba/compartida_publica
 ```
@@ -144,6 +144,10 @@ Se hace un enlace simbólico en la home. Cabe destacar que 'nico' es el nombre d
 ```bash
   ln -s /svr/samba/compartida_publica /home/nico/compartida_publica
 ```
+Se confirma si se completo el enlace simbólico:
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/2278af5fc6d7f9b98e1b0107ddd77eeb57ae3543/Samba_Carpeta%20compartida%20en%20Home.png)
+
 Finalmente, se enlaza la carpeta compartida a la raíz del servidor web Apache
 ```bash
   sudo ln -s /home/nico/compartida_publica /var/www/html/compartida_publica
