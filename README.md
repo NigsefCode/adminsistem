@@ -69,6 +69,13 @@ Además, se configura el Firewall para permitir conexiones en el puerto 3306:
   sudo apt install ufw
   sudo ufw allow 3306
 ```
+Y al intentar entrar desde PowerShell en Windows:
+```bash
+  mysql -h ip_maquina_virtual -u admin -p prueba
+  mysql -h ip_maquina_virtual -u lector -p prueba
+```
+
+![image alt](https://github.com/NigsefCode/adminsistem/blob/f85f3a7e7703eac6b0cf88063d75a32b9c0134b2/MySQL_Base%20de%20datos%20en%20Host.png)
 
 #### Referencia de la documentación para MySQL
 La instalación y configuración de MySQL se realizó siguiendo unos pasos encontrados en [documentación de DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
@@ -363,7 +370,7 @@ Se verifica si los servicios estan funcionando correctamente con el siguiente co
 Hubo un problema en el almacenaje de comandos, donde únicamente se muestran los comandos que ejecuté después de encender la máquina virtual. En otras palabras, todos los comandos utilizados antes de apagar la máquina virtual se perdieron. Desconozco el motivo, sin embargo, detalle cada paso con cada linea de código utilizado a lo largo del Readme.
 
 ### Errores comunes y soluciones.
-- Hubo un problema en MySQL sobre la instalación con apt, el sistema operativo no reconocia el comando ni la librería. Por ello, se tuvo que descargar el paquete dev, que al actualizar el sistema operativo, una vez instalado el paquete, reconocía el apt de las librerías de mysql.
+- Hubo un problema en MySQL sobre la instalación con apt, el sistema operativo no reconocia el comando ni la librería. Por ello, se tuvo que descargar el paquete dev, que al actualizar el sistema operativo, una vez instalado el paquete, reconocía el apt de las librerías de mysql. Además, hubo un problema al verificar usuarios en Windows 11, por ende se tuvo que modificar los usuarios para que puedan conectarse no solo en el localhost.
 - Errores de sintaxis al crear el script de PHP sobre la conexión de MySQL. Para solucionarlo se busco documentación y videos actualizados que permitan generar el script correctamente.
 - Problemas al estar en Windows 10/11 y usar PowerShell ya que hubieron comandos que no funcionaban y se tuvo que buscar documentación sobre comandos alternativas. Sin embargo, para el trabajo, en el caso de ssh, se hizo de forma manual las configuraciones correspondientes.
 - En Samba, se tuvo que configurar los permisos de la carpeta compartida, en donde se tuvo que investigar mucho para configurarlos y reconocer lo que hace cada línea de código correspondiente.
