@@ -141,7 +141,34 @@ Antes de generar claves en la computadora, se debe conocer la dirección IP de t
 ```bash
   nmcli -p device show
 ```
-La dirección IP es la que se encuentra junto al elemento 'IP4.ADDRESS'
+La dirección IP es la que se encuentra junto al elemento 'IP4.ADDRESS'.
+
+Para generar claves SSH de tamaño estándar en la máquina host, se puede hacer con el siguiente comando:
+```bash
+  ssh-keygen
+```
+En el caso de querer personalizar el tamaño de la clave en bits puede hacerse de la siguiente manera:
+```bash
+  ssh-keygen -t rsa -b 4096
+```
+Para este ejemplo se utilizó el tamaño estándar. Ahora se copia la clave pública a la máquina virtual con el siguiente comando:
+```bash
+  ssh-copy-id usuario@ip_máquina_virtual
+```
+
+En caso de estar en Windows 10/11 en PowerShell y no funcione el comando, se puede hacer de forma manual de la siguiente forma:
+```bash
+  cat ~/.ssh/id_rsa.pub | ssh usuario@ip_maquina_virtual  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+```
+Luego, entrar a la máquina virtual desde la terminal de PowerShell:
+```bash
+  ssh usuario@ip_maquina_virtual
+```
+Y se otorgan permisos de acceso:
+```bash
+  chmod 700 ~/.ssh
+  chmod 600 ~/.ssh/authorized_keys
+```
 
 ### Instalación y configuración de Samba
 #### Instalación de Samba
@@ -166,25 +193,25 @@ Se edita el archivo de configuración de Samba, con:
 Se agrega la dirección al final del archivo para compartir carpeta:
 ```bash
   [compartida_publica]
-   path = /home/nico/compartida
+   path = /home/usuario/compartida
    available = yes
    guest ok = yes
    create mask = 0755
    directory mask = 0755
-   valid users = nico
+   valid users = usuario
    read only = no
    browseable = yes
    public = yes
    writable = yes
-   force user = nico
+   force user = usuario
 ```
 Se reinicia el servicio de Samba, con el siguiente comando:
 ```bash
   sudo systemctl restart smbd
 ```
-Se hace un enlace simbólico en la home. Cabe destacar que 'nico' es el nombre de usuario. Se utiliza el siguiente comando:
+Se hace un enlace simbólico en la home. Se utiliza el siguiente comando:
 ```bash
-  ln -s /srv/samba/compartida_publica /home/nico/compartida_publica
+  ln -s /srv/samba/compartida_publica /home/usuario/compartida_publica
 ```
 Se confirma si se completo el enlace simbólico en la home. Estando en home se debe utilizar el siguiente comando:
 ```bash
@@ -195,7 +222,7 @@ Se confirma si se completo el enlace simbólico en la home. Estando en home se d
 
 Finalmente, se enlaza la carpeta compartida a la raíz del servidor web Apache
 ```bash
-  sudo ln -s /home/nico/compartida_publica /var/www/html/compartida_publica
+  sudo ln -s /home/usuario/compartida_publica /var/www/html/compartida_publica
 ```
 Para confirmar el enlace en el servidor web Apache se debe realizar una búsqueda de la carpeta en la raíz del servidor web Apache. Se utiliza el siguiente comando:
 ```bash
@@ -210,11 +237,11 @@ Para demostrar el acceso en la carpeta compartida, se necesita instalar:
 ```
 Luego, se crea una constraseña con el usuario:
 ```bash
-  sudo smbpasswd -a nico
+  sudo smbpasswd -a usuario
 ```
 Para terminar, se ingresa de la siguiente manera:
 ```bash
-  smbclient //localhost/compartida_publica -U nico
+  smbclient //localhost/compartida_publica -U usuario
 ```
 Se le pedirá la contraseña creada anteriormente y podra crear, eliminar o ver carpetas, entre otras cosas. Se puede observar en el siguiente ejemplo:
 
