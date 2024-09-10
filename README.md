@@ -20,7 +20,15 @@ Antes de comenzar con la instalación de los servicios hay que actualizar el sis
 
 ### Instalación y configuración de MySQL
 #### Instalación del Servidor MySQL y configuración de Seguridad
-MySQL es un sistema de gestión de base de datos relacional. Se instala con el siguiente comando y luego se asegura la instalación con: 
+MySQL es un sistema de gestión de base de datos relacional. Primero se descarga el 'dev' de la página oficial de mysql, se puede hacer desde la terminal con el siguiente comando:
+```bash
+  wget https://dev.mysql.com/get/mysql-apt-config_0.8.32-1_all.deb
+```
+Posteriormente se installa el archivo descargado:
+```bash
+  sudo apt install ./mysql-apt-config_0.8.32-1_all.deb
+```
+Luego se actualiza el sistema para la adquisición completa de los paquetes de MySQL y se instala con el siguiente comando y se asegura la instalación con: 
 ```bash
   sudo apt install mysql-server -y
   sudo mysql_secure_installation
