@@ -52,6 +52,23 @@ Verificar usuarios creados:
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/91fb7b6649f0e7e8686dcd303861e36e9a6d542b/MySQL_Verificar%20usuarios%20creados.png)
 
+Sin embargo, para que funcione en el host los usuarios es necesario realizar algunas modificaciones para que los usuarios se puedan conectar desde el host al servicio de la máquina virtual en MySQL:
+Se ingresa al panel de mysql: se ejecutan los siguientes comandos:
+```bash
+  sudo mysql -u root -p
+```
+
+Y se ejecutan las siguientes líneas de código:
+```bash
+  RENAME USER 'admin'@'localhost' TO 'admin'@'%';
+  RENAME USER 'lector'@'localhost' TO 'lector'@'%';
+  FLUSH PRIVILEGES;
+```
+Además, se configura el Firewall para permitir conexiones en el puerto 3306:
+```bash
+  sudo apt install ufw
+  sudo ufw allow 3306
+```
 
 #### Referencia de la documentación para MySQL
 La instalación y configuración de MySQL se realizó siguiendo unos pasos encontrados en [documentación de DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
