@@ -1,0 +1,29 @@
+    1  ls
+    2  su -
+    3  cd ~/
+    4  cd ~/..
+    5  ls
+    6  su -
+    7  clear
+    8  sudo apt update
+    9  exit
+   10  chmod 700 ~/.ssh
+   11  chmod 600 ~/.ssh/authorized_keys
+   12  exit
+   13  ls
+   14  smbclient //localhost/compartida_publica -U usuario
+   15  clear
+   16  exit
+   17  smbclient //localhost/compartida_publica -U nico
+   18  exit
+   19  smbclient //ip_maquina_virtual/compartida_publica -U nico
+   20  clear
+   21  exit
+   22  smbclient //ip_maquina_virtual/la_carpeta_shared -U sekhira
+   23  exit
+   24  clear
+   25  sudo mysql -u root -p
+   26  sudo ufw allow 3306
+   27  exit
+   28  history
+   29  history > history.log
