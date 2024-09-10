@@ -158,9 +158,12 @@ Se agrega la dirección al final del archivo para compartir carpeta:
   [compartida_publica]
    path = /home/nico/compartida
    available = yes
+   guest ok = yes
+   create mask = 0755
+   directory mask = 0755
    valid users = nico
    read only = no
-   browsable = yes
+   browseable = yes
    public = yes
    writable = yes
    force user = nico
@@ -190,6 +193,20 @@ Para confirmar el enlace en el servidor web Apache se debe realizar una búsqued
 ```
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/8f346a45cd5819ccec11dfdd13bcd20e55e2d1c0/Samba_Carpeta%20Compartida%20en%20raiz%20Apache.png)
+
+Para demostrar el acceso en la carpeta compartida, se necesita instalar:
+```bash
+  sudo apt install smbclient
+```
+Luego, se crea una constraseña con el usuario:
+```bash
+  sudo smbpasswd -a nico
+```
+Para terminar, se ingresa de la siguiente manera:
+```bash
+  smbclient //localhost/compartida_publica -U nico
+```
+Se le pedirá la contraseña creada anteriormente y podra crear, eliminar o ver carpetas, entre otras cosas. Se puede observar en el siguiente ejemplo:
 
 ### Instalación de Node.js
 #### Instalación de Node.js
