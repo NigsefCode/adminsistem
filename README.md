@@ -121,9 +121,9 @@ Para confirmar si la conexión es exitosa desde el host para los usuarios admini
 
 Administrador:
 
+![image alt](https://github.com/NigsefCode/adminsistem/blob/7f908bc666dd00faf43ca0a4dd300b939af7db70/PHP_AdminDatos.png)
 
 Lector:
-
 
 ![image alt](https://github.com/NigsefCode/adminsistem/blob/e6543e00fd2e584c95543e2e20c99a237259c58a/PHP_LectorDatos.png)
 
